@@ -60,8 +60,6 @@ header{
     object-fit:cover;
 }
 
-/* SLIDER ANIMATION */
-
 @keyframes slide{
 
     0%{margin-left:0;}
@@ -79,7 +77,7 @@ header{
     100%{margin-left:-400%;}
 }
 
-/* SECTION TITLES */
+/* TITLES */
 
 .section-title{
     text-align:center;
@@ -87,19 +85,20 @@ header{
     margin:40px 0 20px;
 }
 
-/* PRODUCTS */
+/* PRODUCT CONTAINER */
 
 .container{
     width:90%;
     margin:auto;
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:25px;
 }
 
-/* PRODUCT CARD */
+/* CARDS */
 
-.card{
+.card,
+.service-box{
     background:white;
     color:#222;
     border-radius:18px;
@@ -108,26 +107,37 @@ header{
     transition:0.4s;
 }
 
-.card:hover{
+.card:hover,
+.service-box:hover{
     transform:translateY(-10px);
 }
 
-.card img{
+/* IMAGES */
+
+.card img,
+.service-image{
     width:100%;
     height:230px;
     object-fit:cover;
 }
 
-.card-content{
+/* CONTENT */
+
+.card-content,
+.service-content{
     padding:20px;
 }
 
-.card-content h3{
+.card-content h3,
+.service-content h3{
     color:#003cff;
     margin-bottom:10px;
 }
 
-.price{
+/* PRICE */
+
+.price,
+.service-price{
     color:green;
     font-size:24px;
     font-weight:bold;
@@ -155,13 +165,9 @@ header{
     transition:0.3s;
 }
 
-/* CALL BUTTON */
-
 .call-btn{
     background:#003cff;
 }
-
-/* WHATSAPP BUTTON */
 
 .whatsapp{
     background:#25D366;
@@ -177,29 +183,8 @@ header{
     width:90%;
     margin:40px auto;
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:25px;
-}
-
-.service-box{
-    background:white;
-    color:#222;
-    padding:25px;
-    border-radius:18px;
-    text-align:center;
-    box-shadow:0 4px 15px rgba(0,0,0,0.4);
-}
-
-.service-box h3{
-    color:#003cff;
-    margin-bottom:10px;
-}
-
-.service-price{
-    color:green;
-    font-size:24px;
-    font-weight:bold;
-    margin-top:15px;
 }
 
 /* FOOTER */
@@ -223,7 +208,7 @@ footer{
     LISOTECH MARKETPLACE
 </header>
 
-<!-- IMAGE SLIDER -->
+<!-- SLIDER -->
 
 <div class="slider">
 
@@ -286,7 +271,7 @@ footer{
 
     </div>
 
-    <!-- WIRELESS HEADPHONES -->
+    <!-- HEADPHONES -->
 
     <div class="card">
 
@@ -370,26 +355,33 @@ footer{
 
     <div class="service-box">
 
-        <h3>Website Development</h3>
+        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
+        class="service-image">
 
-        <p>
-            Professional websites for businesses and organizations.
-        </p>
+        <div class="service-content">
 
-        <div class="service-price">
-            K5500
-        </div>
+            <h3>Website Development</h3>
 
-        <div class="button-group">
+            <p>
+                Professional websites for businesses and organizations.
+            </p>
 
-            <a href="tel:+260974101130" class="btn call-btn">
-                Call
-            </a>
+            <div class="service-price">
+                K5500
+            </div>
 
-            <a href="https://wa.me/260974101130?text=Hello%20LISOTECH%20MARKETPLACE,%20I%20need%20Website%20Development%20service%20priced%20at%20K5500"
-            class="btn whatsapp">
-                WhatsApp
-            </a>
+            <div class="button-group">
+
+                <a href="tel:+260974101130" class="btn call-btn">
+                    Call
+                </a>
+
+                <a href="https://wa.me/260974101130?text=Hello%20LISOTECH%20MARKETPLACE,%20I%20need%20Website%20Development%20service%20priced%20at%20K5500"
+                class="btn whatsapp">
+                    WhatsApp
+                </a>
+
+            </div>
 
         </div>
 
@@ -399,26 +391,33 @@ footer{
 
     <div class="service-box">
 
-        <h3>Graphic Design</h3>
+        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d"
+        class="service-image">
 
-        <p>
-            Modern logos, posters, flyers, and branding designs.
-        </p>
+        <div class="service-content">
 
-        <div class="service-price">
-            K250
-        </div>
+            <h3>Graphic Design</h3>
 
-        <div class="button-group">
+            <p>
+                Modern logos, posters, flyers, and branding designs.
+            </p>
 
-            <a href="tel:+260974101130" class="btn call-btn">
-                Call
-            </a>
+            <div class="service-price">
+                K250
+            </div>
 
-            <a href="https://wa.me/260974101130?text=Hello%20LISOTECH%20MARKETPLACE,%20I%20need%20Graphic%20Design%20service%20priced%20at%20K250"
-            class="btn whatsapp">
-                WhatsApp
-            </a>
+            <div class="button-group">
+
+                <a href="tel:+260974101130" class="btn call-btn">
+                    Call
+                </a>
+
+                <a href="https://wa.me/260974101130?text=Hello%20LISOTECH%20MARKETPLACE,%20I%20need%20Graphic%20Design%20service%20priced%20at%20K250"
+                class="btn whatsapp">
+                    WhatsApp
+                </a>
+
+            </div>
 
         </div>
 
@@ -428,26 +427,33 @@ footer{
 
     <div class="service-box">
 
-        <h3>Computer Repairs</h3>
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475"
+        class="service-image">
 
-        <p>
-            Fast and reliable repair services for laptops and desktops.
-        </p>
+        <div class="service-content">
 
-        <div class="service-price">
-            K800
-        </div>
+            <h3>Computer Repairs</h3>
 
-        <div class="button-group">
+            <p>
+                Fast and reliable repair services for laptops and desktops.
+            </p>
 
-            <a href="tel:+260974101130" class="btn call-btn">
-                Call
-            </a>
+            <div class="service-price">
+                K800
+            </div>
 
-            <a href="https://wa.me/260974101130?text=Hello%20LISOTECH%20MARKETPLACE,%20I%20need%20Computer%20Repair%20service%20priced%20at%20K800"
-            class="btn whatsapp">
-                WhatsApp
-            </a>
+            <div class="button-group">
+
+                <a href="tel:+260974101130" class="btn call-btn">
+                    Call
+                </a>
+
+                <a href="https://wa.me/260974101130?text=Hello%20LISOTECH%20MARKETPLACE,%20I%20need%20Computer%20Repair%20service%20priced%20at%20K800"
+                class="btn whatsapp">
+                    WhatsApp
+                </a>
+
+            </div>
 
         </div>
 
@@ -457,26 +463,33 @@ footer{
 
     <div class="service-box">
 
-        <h3>Digital Marketing</h3>
+        <img src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07"
+        class="service-image">
 
-        <p>
-            Promote your business online using social media ads.
-        </p>
+        <div class="service-content">
 
-        <div class="service-price">
-            K2500
-        </div>
+            <h3>Digital Marketing</h3>
 
-        <div class="button-group">
+            <p>
+                Promote your business online using social media ads.
+            </p>
 
-            <a href="tel:+260974101130" class="btn call-btn">
-                Call
-            </a>
+            <div class="service-price">
+                K2500
+            </div>
 
-            <a href="https://wa.me/260974101130?text=Hello%20LISOTECH%20MARKETPLACE,%20I%20need%20Digital%20Marketing%20service%20priced%20at%20K2500"
-            class="btn whatsapp">
-                WhatsApp
-            </a>
+            <div class="button-group">
+
+                <a href="tel:+260974101130" class="btn call-btn">
+                    Call
+                </a>
+
+                <a href="https://wa.me/260974101130?text=Hello%20LISOTECH%20MARKETPLACE,%20I%20need%20Digital%20Marketing%20service%20priced%20at%20K2500"
+                class="btn whatsapp">
+                    WhatsApp
+                </a>
+
+            </div>
 
         </div>
 
