@@ -8,6 +8,8 @@
 
 <style>
 
+/* RESET */
+
 *{
     margin:0;
     padding:0;
@@ -15,22 +17,24 @@
     font-family:Arial, sans-serif;
 }
 
+/* BODY */
+
 body{
-    background:#f4f4f4;
-    color:#222;
+    background:linear-gradient(135deg,#003cff,#00a651);
+    min-height:100vh;
+    color:white;
 }
 
 /* HEADER */
 
 header{
-    background:linear-gradient(135deg, orange, green);
-    color:white;
-    text-align:center;
+    background:rgba(0,0,0,0.4);
     padding:25px;
-    font-size:32px;
+    text-align:center;
+    font-size:35px;
     font-weight:bold;
     letter-spacing:2px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+    box-shadow:0 4px 10px rgba(0,0,0,0.4);
 }
 
 /* SLIDER */
@@ -40,9 +44,8 @@ header{
     height:400px;
     margin:30px auto;
     overflow:hidden;
-    border-radius:15px;
-    position:relative;
-    box-shadow:0 6px 15px rgba(0,0,0,0.3);
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.5);
 }
 
 .slides{
@@ -57,7 +60,10 @@ header{
     object-fit:cover;
 }
 
+/* SLIDER ANIMATION */
+
 @keyframes slide{
+
     0%{margin-left:0;}
     20%{margin-left:0;}
 
@@ -73,13 +79,12 @@ header{
     100%{margin-left:-400%;}
 }
 
-/* SECTION */
+/* SECTION TITLES */
 
 .section-title{
     text-align:center;
+    font-size:32px;
     margin:40px 0 20px;
-    font-size:30px;
-    color:green;
 }
 
 /* PRODUCTS */
@@ -90,15 +95,17 @@ header{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:25px;
-    padding-bottom:50px;
 }
+
+/* PRODUCT CARD */
 
 .card{
     background:white;
-    border-radius:15px;
+    color:#222;
+    border-radius:18px;
     overflow:hidden;
-    box-shadow:0 4px 12px rgba(0,0,0,0.2);
-    transition:0.3s;
+    box-shadow:0 4px 15px rgba(0,0,0,0.4);
+    transition:0.4s;
 }
 
 .card:hover{
@@ -107,7 +114,7 @@ header{
 
 .card img{
     width:100%;
-    height:220px;
+    height:230px;
     object-fit:cover;
 }
 
@@ -116,30 +123,33 @@ header{
 }
 
 .card-content h3{
+    color:#003cff;
     margin-bottom:10px;
-    color:orange;
 }
 
 .price{
-    font-size:22px;
     color:green;
+    font-size:24px;
     font-weight:bold;
-    margin:10px 0;
+    margin-top:12px;
 }
+
+/* CALL BUTTON */
 
 .btn{
     display:inline-block;
-    padding:10px 18px;
-    background:orange;
+    margin-top:15px;
+    padding:12px 20px;
+    background:linear-gradient(135deg,#003cff,#00a651);
     color:white;
     text-decoration:none;
-    border-radius:8px;
-    margin-top:10px;
+    border-radius:10px;
+    font-weight:bold;
     transition:0.3s;
 }
 
 .btn:hover{
-    background:green;
+    opacity:0.8;
 }
 
 /* SERVICES */
@@ -154,15 +164,16 @@ header{
 
 .service-box{
     background:white;
+    color:#222;
     padding:25px;
-    border-radius:15px;
+    border-radius:18px;
     text-align:center;
-    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+    box-shadow:0 4px 15px rgba(0,0,0,0.4);
 }
 
 .service-box h3{
-    color:orange;
-    margin-bottom:15px;
+    color:#003cff;
+    margin-bottom:10px;
 }
 
 .service-price{
@@ -175,11 +186,11 @@ header{
 /* FOOTER */
 
 footer{
-    background:#111;
-    color:white;
+    background:rgba(0,0,0,0.5);
     text-align:center;
     padding:20px;
     margin-top:40px;
+    font-size:18px;
 }
 
 </style>
@@ -187,103 +198,213 @@ footer{
 
 <body>
 
+<!-- HEADER -->
+
 <header>
     LISOTECH MARKETPLACE
 </header>
 
-<!-- SLIDING IMAGES -->
+<!-- IMAGE SLIDER -->
 
 <div class="slider">
+
     <div class="slides">
 
-        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" alt="">
-        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e" alt="">
-        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" alt="">
-        <img src="https://images.unsplash.com/photo-1517336714739-489689fd1ca8" alt="">
-        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853" alt="">
+        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9">
+
+        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e">
+
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30">
+
+        <img src="https://images.unsplash.com/photo-1517336714739-489689fd1ca8">
+
+        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853">
 
     </div>
+
 </div>
 
 <!-- PRODUCTS -->
 
-<h2 class="section-title">Featured Products</h2>
+<h2 class="section-title">
+    Featured Products
+</h2>
 
 <div class="container">
 
+    <!-- PRODUCT 1 -->
+
     <div class="card">
+
         <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9">
+
         <div class="card-content">
+
             <h3>Smart Phone</h3>
-            <p>Latest Android smartphone with fast performance.</p>
-            <div class="price">$350</div>
-            <a href="#" class="btn">Buy Now</a>
+
+            <p>
+                Latest Android smartphone with fast performance.
+            </p>
+
+            <div class="price">
+                $350
+            </div>
+
+            <a href="tel:+260974101130" class="btn">
+                Call Seller
+            </a>
+
         </div>
+
     </div>
 
+    <!-- PRODUCT 2 -->
+
     <div class="card">
+
         <img src="https://images.unsplash.com/photo-1517336714739-489689fd1ca8">
+
         <div class="card-content">
+
             <h3>Laptop Computer</h3>
-            <p>Powerful laptop for office and gaming work.</p>
-            <div class="price">$850</div>
-            <a href="#" class="btn">Buy Now</a>
+
+            <p>
+                Powerful laptop for office and gaming work.
+            </p>
+
+            <div class="price">
+                $850
+            </div>
+
+            <a href="tel:+260974101130" class="btn">
+                Call Seller
+            </a>
+
         </div>
+
     </div>
 
+    <!-- PRODUCT 3 -->
+
     <div class="card">
+
         <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e">
+
         <div class="card-content">
+
             <h3>Wireless Headphones</h3>
-            <p>High quality sound with noise cancellation.</p>
-            <div class="price">$120</div>
-            <a href="#" class="btn">Buy Now</a>
+
+            <p>
+                High quality sound with noise cancellation.
+            </p>
+
+            <div class="price">
+                $120
+            </div>
+
+            <a href="tel:+260974101130" class="btn">
+                Call Seller
+            </a>
+
         </div>
+
     </div>
 
+    <!-- PRODUCT 4 -->
+
     <div class="card">
+
         <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30">
+
         <div class="card-content">
+
             <h3>Smart Watch</h3>
-            <p>Modern smartwatch with fitness tracking.</p>
-            <div class="price">$90</div>
-            <a href="#" class="btn">Buy Now</a>
+
+            <p>
+                Modern smartwatch with fitness tracking.
+            </p>
+
+            <div class="price">
+                $90
+            </div>
+
+            <a href="tel:+260974101130" class="btn">
+                Call Seller
+            </a>
+
         </div>
+
     </div>
 
 </div>
 
 <!-- SERVICES -->
 
-<h2 class="section-title">Our Services</h2>
+<h2 class="section-title">
+    Our Services
+</h2>
 
 <div class="services">
 
     <div class="service-box">
+
         <h3>Website Development</h3>
-        <p>Professional websites for businesses and organizations.</p>
-        <div class="service-price">$500</div>
+
+        <p>
+            Professional websites for businesses and organizations.
+        </p>
+
+        <div class="service-price">
+            $500
+        </div>
+
     </div>
 
     <div class="service-box">
+
         <h3>Graphic Design</h3>
-        <p>Modern logos, posters, flyers, and branding designs.</p>
-        <div class="service-price">$150</div>
+
+        <p>
+            Modern logos, posters, flyers, and branding designs.
+        </p>
+
+        <div class="service-price">
+            $150
+        </div>
+
     </div>
 
     <div class="service-box">
+
         <h3>Computer Repairs</h3>
-        <p>Fast and reliable repair services for laptops and desktops.</p>
-        <div class="service-price">$80</div>
+
+        <p>
+            Fast and reliable repair services for laptops and desktops.
+        </p>
+
+        <div class="service-price">
+            $80
+        </div>
+
     </div>
 
     <div class="service-box">
+
         <h3>Digital Marketing</h3>
-        <p>Promote your business online using social media ads.</p>
-        <div class="service-price">$250</div>
+
+        <p>
+            Promote your business online using social media ads.
+        </p>
+
+        <div class="service-price">
+            $250
+        </div>
+
     </div>
 
 </div>
+
+<!-- FOOTER -->
 
 <footer>
     © 2026 LISOTECH MARKETPLACE | All Rights Reserved
