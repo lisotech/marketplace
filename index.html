@@ -3,12 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>LISOTECH MARKETPLACE</title>
 
 <style>
-
-/* RESET */
 
 *{
     margin:0;
@@ -17,24 +14,24 @@
     font-family:Arial, sans-serif;
 }
 
-/* BODY */
-
 body{
     background:linear-gradient(135deg,#003cff,#00a651);
-    min-height:100vh;
     color:white;
+    min-height:100vh;
 }
 
 /* HEADER */
 
 header{
     background:rgba(0,0,0,0.4);
-    padding:25px;
+    padding:20px;
     text-align:center;
-    font-size:35px;
+    font-size:36px;
     font-weight:bold;
     letter-spacing:2px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.4);
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
 /* SLIDER */
@@ -42,10 +39,10 @@ header{
 .slider{
     width:90%;
     height:400px;
-    margin:30px auto;
+    margin:25px auto;
     overflow:hidden;
     border-radius:20px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.5);
+    box-shadow:0 5px 15px rgba(0,0,0,0.4);
 }
 
 .slides{
@@ -62,32 +59,45 @@ header{
 
 @keyframes slide{
 
-    0%{margin-left:0;}
-    20%{margin-left:0;}
+    0%,20%{
+        margin-left:0;
+    }
 
-    25%{margin-left:-100%;}
-    45%{margin-left:-100%;}
+    25%,40%{
+        margin-left:-100%;
+    }
+
+    45%,60%{
+        margin-left:-200%;
+    }
+
+    65%,80%{
+        margin-left:-300%;
+    }
+
+    85%,100%{
+        margin-left:-400%;
+    }
 }
 
 /* TITLES */
 
 .section-title{
     text-align:center;
+    margin:30px 0;
     font-size:32px;
-    margin:40px 0 20px;
 }
 
-/* PRODUCT CONTAINER */
+/* PRODUCTS & SERVICES */
 
-.container{
+.container,
+.services{
     width:90%;
     margin:auto;
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:25px;
 }
-
-/* CARDS */
 
 .card,
 .service-box{
@@ -96,24 +106,20 @@ header{
     border-radius:18px;
     overflow:hidden;
     box-shadow:0 4px 15px rgba(0,0,0,0.4);
-    transition:0.4s;
+    transition:0.3s;
 }
 
 .card:hover,
 .service-box:hover{
-    transform:translateY(-10px);
+    transform:translateY(-8px);
 }
-
-/* IMAGES */
 
 .card img,
 .service-image{
     width:100%;
-    height:230px;
+    height:220px;
     object-fit:cover;
 }
-
-/* CONTENT */
 
 .card-content,
 .service-content{
@@ -126,17 +132,15 @@ header{
     margin-bottom:10px;
 }
 
-/* PRICE */
-
 .price,
 .service-price{
     color:green;
     font-size:24px;
     font-weight:bold;
-    margin-top:12px;
+    margin-top:10px;
 }
 
-/* BUTTON AREA */
+/* BUTTONS */
 
 .button-group{
     display:flex;
@@ -145,16 +149,12 @@ header{
     flex-wrap:wrap;
 }
 
-/* BUTTONS */
-
 .btn{
-    display:inline-block;
     padding:12px 18px;
-    color:white;
     text-decoration:none;
+    color:white;
     border-radius:10px;
     font-weight:bold;
-    transition:0.3s;
 }
 
 .call-btn{
@@ -166,17 +166,7 @@ header{
 }
 
 .btn:hover{
-    opacity:0.8;
-}
-
-/* SERVICES */
-
-.services{
-    width:90%;
-    margin:40px auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
+    opacity:0.85;
 }
 
 /* FOOTER */
@@ -186,15 +176,11 @@ footer{
     text-align:center;
     padding:20px;
     margin-top:40px;
-    font-size:18px;
 }
 
 </style>
 </head>
-
 <body>
-
-<!-- HEADER -->
 
 <header>
     LISOTECH MARKETPLACE
@@ -203,295 +189,456 @@ footer{
 <!-- SLIDER -->
 
 <div class="slider">
-
     <div class="slides">
 
-        <img src="1.png">
+        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" alt="Smart Phone">
 
-        <img src="2.png">
+        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e" alt="Headphones">
 
-        <img src="3.png">
-        <img src="4.png">
-        <img src="5.png">
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" alt="Smart Watch">
+
+        <img src="https://images.unsplash.com/photo-1517336714739-489689fd1ca8" alt="Laptop">
+
+        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853" alt="Computer">
 
     </div>
-
 </div>
 
 <!-- PRODUCTS -->
 
-<h2 class="section-title">
-    Featured Products
-</h2>
+<h2 class="section-title">Featured Products</h2>
 
 <div class="container">
 
     <!-- SMART PHONE -->
 
     <div class="card">
-
         <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9">
 
         <div class="card-content">
-
             <h3>Smart Phone</h3>
+            <p>Latest Android smartphone with fast performance.</p>
 
-            <p>
-                Latest Android smartphone with fast performance.
-            </p>
-
-            <div class="price">
-                K3500
-            </div>
+            <div class="price">K3500</div>
 
             <div class="button-group">
-
-                <a href="tel:+260974101130" class="btn call-btn">
-                    Call
-                </a>
+                <a href="tel:+260974101130" class="btn call-btn">Call</a>
 
                 <a href="https://wa.me/260974101130?text=Hello%20LISOTECH%20MARKETPLACE,%20I%20am%20interested%20in%20the%20Smart%20Phone%20priced%20at%20K3500"
-                class="btn whatsapp">
-                    WhatsApp
-                </a>
-
+                class="btn whatsapp">WhatsApp</a>
             </div>
-
         </div>
-
     </div>
 
     <!-- HEADPHONES -->
 
     <div class="card">
-
         <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e">
 
         <div class="card-content">
-
             <h3>Wireless Headphones</h3>
+            <p>High quality sound with noise cancellation.</p>
 
-            <p>
-                High quality sound with noise cancellation.
-            </p>
-
-            <div class="price">
-                K500
-            </div>
+            <div class="price">K500</div>
 
             <div class="button-group">
-
-                <a href="tel:+260974101130" class="btn call-btn">
-                    Call
-                </a>
+                <a href="tel:+260974101130" class="btn call-btn">Call</a>
 
                 <a href="https://wa.me/260974101130?text=Hello%20LISOTECH%20MARKETPLACE,%20I%20am%20interested%20in%20the%20Wireless%20Headphones%20priced%20at%20K500"
-                class="btn whatsapp">
-                    WhatsApp
-                </a>
-
+                class="btn whatsapp">WhatsApp</a>
             </div>
-
         </div>
-
     </div>
 
     <!-- SMART WATCH -->
 
     <div class="card">
-
         <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30">
 
         <div class="card-content">
-
             <h3>Smart Watch</h3>
+            <p>Modern smartwatch with fitness tracking.</p>
 
-            <p>
-                Modern smartwatch with fitness tracking.
-            </p>
-
-            <div class="price">
-                K750
-            </div>
+            <div class="price">K750</div>
 
             <div class="button-group">
-
-                <a href="tel:+260974101130" class="btn call-btn">
-                    Call
-                </a>
+                <a href="tel:+260974101130" class="btn call-btn">Call</a>
 
                 <a href="https://wa.me/260974101130?text=Hello%20LISOTECH%20MARKETPLACE,%20I%20am%20interested%20in%20the%20Smart%20Watch%20priced%20at%20K750"
-                class="btn whatsapp">
-                    WhatsApp
-                </a>
-
+                class="btn whatsapp">WhatsApp</a>
             </div>
-
         </div>
-
     </div>
 
 </div>
 
 <!-- SERVICES -->
 
-<h2 class="section-title">
-    Our Services
-</h2>
+<h2 class="section-title">Our Services</h2>
 
 <div class="services">
 
     <!-- WEBSITE DEVELOPMENT -->
 
     <div class="service-box">
-
-        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
-        class="service-image">
+        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" class="service-image">
 
         <div class="service-content">
-
             <h3>Website Development</h3>
+            <p>Professional websites for businesses and organizations.</p>
 
-            <p>
-                Professional websites for businesses and organizations.
-            </p>
-
-            <div class="service-price">
-                K5500
-            </div>
+            <div class="service-price">K5500</div>
 
             <div class="button-group">
-
-                <a href="tel:+260974101130" class="btn call-btn">
-                    Call
-                </a>
+                <a href="tel:+260974101130" class="btn call-btn">Call</a>
 
                 <a href="https://wa.me/260974101130?text=Hello%20LISOTECH%20MARKETPLACE,%20I%20need%20Website%20Development%20service%20priced%20at%20K5500"
-                class="btn whatsapp">
-                    WhatsApp
-                </a>
-
+                class="btn whatsapp">WhatsApp</a>
             </div>
-
         </div>
-
     </div>
 
     <!-- GRAPHIC DESIGN -->
 
     <div class="service-box">
-
-        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d"
-        class="service-image">
+        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d" class="service-image">
 
         <div class="service-content">
-
             <h3>Graphic Design</h3>
+            <p>Modern logos, posters, flyers, and branding designs.</p>
 
-            <p>
-                Modern logos, posters, flyers, and branding designs.
-            </p>
-
-            <div class="service-price">
-                K250
-            </div>
+            <div class="service-price">K250</div>
 
             <div class="button-group">
-
-                <a href="tel:+260974101130" class="btn call-btn">
-                    Call
-                </a>
+                <a href="tel:+260974101130" class="btn call-btn">Call</a>
 
                 <a href="https://wa.me/260974101130?text=Hello%20LISOTECH%20MARKETPLACE,%20I%20need%20Graphic%20Design%20service%20priced%20at%20K250"
-                class="btn whatsapp">
-                    WhatsApp
-                </a>
-
+                class="btn whatsapp">WhatsApp</a>
             </div>
-
         </div>
-
     </div>
 
     <!-- COMPUTER REPAIRS -->
 
     <div class="service-box">
-
-        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475"
-        class="service-image">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" class="service-image">
 
         <div class="service-content">
-
             <h3>Computer Repairs</h3>
+            <p>Fast and reliable repair services for laptops and desktops.</p>
 
-            <p>
-                Fast and reliable repair services for laptops and desktops.
-            </p>
-
-            <div class="service-price">
-                K800
-            </div>
+            <div class="service-price">K800</div>
 
             <div class="button-group">
-
-                <a href="tel:+260974101130" class="btn call-btn">
-                    Call
-                </a>
+                <a href="tel:+260974101130" class="btn call-btn">Call</a>
 
                 <a href="https://wa.me/260974101130?text=Hello%20LISOTECH%20MARKETPLACE,%20I%20need%20Computer%20Repair%20service%20priced%20at%20K800"
-                class="btn whatsapp">
-                    WhatsApp
-                </a>
-
+                class="btn whatsapp">WhatsApp</a>
             </div>
-
         </div>
-
     </div>
 
     <!-- DIGITAL MARKETING -->
 
     <div class="service-box">
-
-        <img src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07"
-        class="service-image">
+        <img src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07" class="service-image">
 
         <div class="service-content">
-
             <h3>Digital Marketing</h3>
+            <p>Promote your business online using social media ads.</p>
 
-            <p>
-                Promote your business online using social media ads.
-            </p>
-
-            <div class="service-price">
-                K2500
-            </div>
+            <div class="service-price">K2500</div>
 
             <div class="button-group">
-
-                <a href="tel:+260974101130" class="btn call-btn">
-                    Call
-                </a>
+                <a href="tel:+260974101130" class="btn call-btn">Call</a>
 
                 <a href="https://wa.me/260974101130?text=Hello%20LISOTECH%20MARKETPLACE,%20I%20need%20Digital%20Marketing%20service%20priced%20at%20K2500"
-                class="btn whatsapp">
-                    WhatsApp
-                </a>
-
+                class="btn whatsapp">WhatsApp</a>
             </div>
-
         </div>
-
     </div>
 
 </div>
 
-<!-- FOOTER -->
+<!-- Custom styled compact footer -->
+<footer style="background:#3b7c96; color:white; padding:15px 10px; text-align:center;">
 
-<footer>
-    © 2026 LISOTECH MARKETPLACE | All Rights Reserved
+  <!-- Colored Box Social Layout with Vector Emblems inside -->
+  <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin-bottom: 10px;">
+
+    <!-- X Layout: Black Background -->
+    <a href="https://x.com/lisotechzambia" target="_blank" style="
+            width:105px;
+            height:38px;
+            background-color: #000000;
+            border-radius:4px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            gap: 6px;
+            color:white;
+            font-size:11px;
+            font-weight:600;
+            text-decoration:none;">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="white">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+      </svg>
+
+    </a>
+
+    <!-- Facebook Layout: Blue Background -->
+    <a href="https://www.facebook.com/lisotechinnovations" target="_blank" style="
+            width:105px;
+            height:38px;
+            background-color: #1877F2;
+            border-radius:4px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            gap: 6px;
+            color:white;
+            font-size:11px;
+            font-weight:600;
+            text-decoration:none;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="white">
+        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+      </svg>
+      Facebook
+    </a>
+
+    <!-- Instagram Layout: Brand Gradient Background -->
+    <a href="https://www.instagram.com/lisotechinnovations" target="_blank" style="
+            width:105px;
+            height:38px;
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            border-radius:4px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            gap: 6px;
+            color:white;
+            font-size:11px;
+            font-weight:600;
+            text-decoration:none;">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="white">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+      </svg>
+      Instagram
+    </a>
+
+    <!-- WhatsApp Layout: Green Background -->
+    <a href="https://wa.me/message/NEGCGNOZ4BOHP1" target="_blank" style="
+            width:105px;
+            height:38px;
+            background-color: #25D366;
+            border-radius:4px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            gap: 6px;
+            color:white;
+            font-size:11px;
+            font-weight:600;
+            text-decoration:none;">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="white">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.413 9.863-9.832.002-2.623-1.023-5.092-2.885-6.957C16.528 1.961 14.069.936 11.453.936c-5.438 0-9.863 4.414-9.866 9.833-.001 1.674.452 3.308 1.311 4.745l-.971 3.548 3.64-.954zm10.978-6.195c-.3覆-.15-1.774-.875-2.046-.975-.272-.1-.47-.15-.667.15-.197.3-.763.975-.934 1.175-.171.2-.343.225-.643.075-.3-.15-1.267-.467-2.413-1.49-.893-.797-1.495-1.782-1.67-2.083-.171-.3-.018-.462.132-.612.135-.135.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.667-1.609-.914-2.203-.241-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.774-.725 2.022-1.424.248-.699.248-1.299.174-1.424-.074-.124-.272-.199-.572-.349z" />
+      </svg>
+      WhatsApp
+    </a>
+
+  </div>
+
+  <div>
+    <p style="margin:5px 0; font-size:13px; opacity:0.95;">
+      © 2026 Lisotech Innovations. All Rights Reserved.
+    </p>
+  </div>
+
+  <div style="margin-top: 5px;">
+    <marquee style="font-size:12px; max-width: 500px; margin: 0 auto; display: block;">Designed @Lisotech Innovations. call or whatsapp +260974101130</marquee>
+  </div>
 </footer>
+
+<script>
+  // --- Image Slider Logic ---
+  let currentSlide = 0;
+  const slider = document.getElementById('slider');
+  const totalSlides = 3;
+
+  function moveSlide(direction) {
+    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
+  // Auto slide every 5 seconds
+  setInterval(() => moveSlide(1), 5000);
+  // --- Sample Products Data (10 Items with customizable image attributes) ---
+  const products = [{
+      id: 1,
+      name: "Graphics",
+      price: "K3,500",
+      image: "2.jpg",
+      desc: "High quality graphics design."
+    },
+    {
+      id: 2,
+      name: "Leather Men's Shoes",
+      price: "K850",
+      image: "https://images.unsplash.com/photo-1533867617858-e7b97e060509?w=512&h=512&fit=crop",
+      desc: "Pure elegant local leather shoes made for supreme comfort and formal dress codes."
+    },
+    {
+      id: 3,
+      name: "Wireless Bluetooth Speaker",
+      price: "K450",
+      image: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=512&h=512&fit=crop",
+      desc: "Waterproof outdoor speaker featuring deep bass and up to 10 hours of uninterrupted playback."
+    },
+    {
+      id: 4,
+      name: "Digital Smart Watch",
+      price: "K600",
+      image: "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=512&h=512&fit=crop",
+      desc: "Tracks your steps, monitoring heart rate, notifications, and features a sleek premium black strap finish."
+    },
+    {
+      id: 5,
+      name: "Ergonomic Office Chair",
+      price: "K2,200",
+      image: "https://images.unsplash.com/photo-1505797149-43b0069ec26b?w=512&h=512&fit=crop",
+      desc: "Perfect for remote setups or office workspace. Complete adjustable lumbar support."
+    },
+    {
+      id: 6,
+      name: "4K Ultra HD Smart TV",
+      price: "K7,800",
+      image: "https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=512&h=512&fit=crop",
+      desc: "Enjoy your streaming applications seamlessly with flawless resolutions and vivid sound systems."
+    },
+    {
+      id: 7,
+      name: "Premium Quality Blender",
+      price: "K550",
+      image: "https://images.unsplash.com/photo-1578643463396-0997cb5328c1?w=512&h=512&fit=crop",
+      desc: "Heavy-duty kitchen counter blender, optimized perfectly for fruits, smoothies, and crushing ice smoothly."
+    },
+    {
+      id: 8,
+      name: "Unisex Cotton Hoodie",
+      price: "K350",
+      image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=512&h=512&fit=crop",
+      desc: "100% thick premium combed cotton fabric designed to keep you warm, styling cleanly for casual events."
+    },
+    {
+      id: 9,
+      name: "High-Speed Laptop Intel i5",
+      price: "K9,500",
+      image: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=512&h=512&fit=crop",
+      desc: "Lightweight ultrabook optimized heavily for academic students, modern office tasks, and everyday workflow."
+    },
+    {
+      id: 10,
+      name: "Web Dev",
+      price: "K400",
+      image: "1.jpg",
+      desc: "Standard and Premium Website."
+    }
+  ];
+  // --- Render Products into Grid ---
+  const productGrid = document.getElementById('productGrid');
+  const phoneNum = "260974101130";
+  products.forEach((prod, index) => {
+    const whatsappText = encodeURIComponent(`Hello Kwatu Amakwebo! I am highly interested in purchasing "${prod.name}" for ${prod.price}. Please provide availability details.`);
+    const whatsappUrl = `https://wa.me/${phoneNum}?text=${whatsappText}`;
+    const card = document.createElement('div');
+    card.className = 'product-card';
+    card.innerHTML = `
+                <img src="${prod.image}" alt="${prod.name}" class="product-image" width="512" height="512">
+                <div class="product-info">
+                    <h3 class="product-title">${prod.name}</h3>
+                    <div class="product-price">${prod.price}</div>
+                    
+                    <div class="btn-container">
+                        <div class="btn-row">
+                            <button class="btn btn-buy" onclick="triggerBuy('${prod.name}', '${prod.price}')">Buy</button>
+                            <button class="btn btn-details" onclick="openDetails(${index})">Details</button>
+                        </div>
+                        <a href="${whatsappUrl}" target="_blank" class="btn btn-whatsapp">
+                            💬 WhatsApp Inquiry
+                        </a>
+                    </div>
+                </div>
+            `;
+    productGrid.appendChild(card);
+  });
+  // --- Action Handlers ---
+  function triggerBuy(name, price) {
+    alert(`Thank you for choosing Kwatu Amakwebo!\n\nTo complete your purchase for: "${name}" (${price}), please proceed to send us a direct message on WhatsApp or Call via +260974101130.`);
+  }
+
+  function openDetails(index) {
+    const prod = products[index];
+    document.getElementById('modalTitle').innerText = prod.name;
+    document.getElementById('modalDescription').innerText = prod.desc;
+    document.getElementById('modalPrice').innerText = `Price: ${prod.price}`;
+    document.getElementById('detailsModal').style.display = 'flex';
+  }
+
+  function closeModal() {
+    document.getElementById('detailsModal').style.display = 'none';
+  }
+  // Close modal if user clicks outside of the window
+  window.onclick = function(event) {
+    const modal = document.getElementById('detailsModal');
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    /* Floating Buttons */
+    .floating-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 9999;
+    }
+
+    .float-btn {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: 0.3s ease;
+    }
+
+    .float-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-btn {
+      background: #25D366;
+    }
+
+    .call-btn {
+      background: #007BFF;
+      color: white;
+      font-size: 28px;
+    }
+  </style>
 
 </body>
 </html>
